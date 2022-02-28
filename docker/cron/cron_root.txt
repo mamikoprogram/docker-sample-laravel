@@ -1,0 +1,2 @@
+# test command
+# * * * * * date >> /tmp/test.txt
