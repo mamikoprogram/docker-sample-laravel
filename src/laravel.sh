@@ -4,7 +4,7 @@ cd ../
 rm -Rf ./learning
 
 # プロジェクト名 learning で作成
-composer create-project "laravel/laravel=6.*" learning -n
+composer create-project "laravel/laravel=${LARAVEL_VERSION}" learning -n
 
 # プロジェクトディレクトリに移動
 cd ./learning
