@@ -35,6 +35,9 @@ Homestead.json
 /docker/testdb/data/*
 /docker/testdb/log/*
 
+#docker cron
+/docker/cron/tmp/*
+
 # OS generated files #
 ######################
 .DS_Store
