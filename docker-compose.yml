@@ -21,10 +21,10 @@ services:
     networks:
       - app_network
     environment:
-      MYSQL_DATABASE: learning_laravel
-      MYSQL_USER: learning_laravel
-      MYSQL_PASSWORD: learning_laravel
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_HOST: db
+      MYSQL_DATABASE: learning_php
+      MYSQL_USER: learning_php
+      MYSQL_PASSWORD: learning_php
       LARAVEL_VERSION: "*"
     volumes:
       - ./docker/php/php.ini:/usr/local/etc/php/conf.d/php.ini
@@ -40,6 +40,11 @@ services:
     build: docker/cron
     networks:
       - app_network
+    environment:
+      MYSQL_HOST: db
+      MYSQL_DATABASE: learning_php
+      MYSQL_USER: learning_php
+      MYSQL_PASSWORD: learning_php
     volumes:
       - ./docker/php/php.ini:/usr/local/etc/php/conf.d/php.ini # php の php.iniを参照
       - ./docker/cron/cron_root.txt:/var/spool/cron/crontabs/root
