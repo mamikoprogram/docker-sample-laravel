@@ -22,7 +22,7 @@ php artisan storage:link
 chmod -R 777 /var/www/learning/storage
 
 # DB接続情報を上書き
-sed -i -e "s/DB_HOST=.*$/DB_HOST=db/" \.env
+sed -i -e "s/DB_HOST=.*$/DB_HOST=$MYSQL_DB_HOST/" \.env
 sed -i -e "s/DB_DATABASE=.*$/DB_DATABASE=$MYSQL_DATABASE/" .env
 sed -i -e "s/DB_USERNAME=.*$/DB_USERNAME=$MYSQL_USER/" .env
 sed -i -e "s/DB_PASSWORD=.*$/DB_PASSWORD=$MYSQL_PASSWORD/" .env
