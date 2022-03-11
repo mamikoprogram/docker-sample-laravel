@@ -61,6 +61,7 @@ services:
     networks:
       - app_network
     environment:
+      MYSQL_HOST: db
       MYSQL_DATABASE: learning_laravel
       MYSQL_USER: learning_laravel
       MYSQL_PASSWORD: learning_laravel
