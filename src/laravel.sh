@@ -29,4 +29,3 @@ sed -i -e "s/DB_PASSWORD=.*$/DB_PASSWORD=$MYSQL_PASSWORD/" .env
 
 # DB接続チェックをします
 php artisan tinker ../db_check.php
-
