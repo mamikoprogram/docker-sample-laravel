@@ -20,6 +20,9 @@ php artisan storage:link
 
 # storage配下に書き込み権限を付与
 chmod -R 777 /var/www/learning/storage
+# 本番では下記のような権限設定をすることが多いです。（実装者により多少異なる）
+#chmod -R 640/var/www/learning/storage
+
 
 # DB接続情報を上書き
 sed -i -e "s/DB_HOST=.*$/DB_HOST=$MYSQL_HOST/" \.env
